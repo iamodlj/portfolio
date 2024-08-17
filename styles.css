@@ -1,71 +1,194 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+New&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-body {
-  margin: 0;
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
   padding: 0;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: black;
-  color: #00ff00;
-  overflow: hidden; /* To hide the scrollbar */
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/* Hacking Background */
-@keyframes hacking-animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.hacking-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  z-index: -1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://i.imgur.com/zD7aLKq.png'); /* Matrix effect image */
-  background-size: cover;
-  animation: hacking-animation 10s linear infinite;
-}
-
-/* Hacking Font */
-h1, h2, h3, p, a, button {
-  font-family: 'Courier New', Courier, monospace;
-  color: #00ff00;
-}
-
-/* Adjusting Link and Button Styles */
-a, button {
-  background: transparent;
-  border: 1px solid #00ff00;
-  color: #00ff00;
+a {
   text-decoration: none;
 }
 
-a:hover, button:hover {
-  background-color: #00ff00;
-  color: black;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-/* Additional Styling */
 nav {
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
 }
 
-section {
-  padding: 20px;
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.socials {
+  background-color: #9333ea;
+  color: white;
+}
+
+.socials:hover{
+  background-color: #ffffff;
+  color: #731ac7;
+}
+.action_btn {
+  position: relative;
+}
+
 
 .popup {
-  position: fixed;
+  position:fixed ;
   background: #731ac7;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #731ac7;
   display: none;
   z-index: 99999;
 }
@@ -77,12 +200,17 @@ section {
   width: 200px;
 }
 
+
+.socials:hover + .popup {
+  display :flex;
+}
+
 .popup-content h3 {
   margin-top: 0;
 }
 
 .popup-content ul {
-  list-style: none;
+  list-style:none;
   padding: 0;
   margin: 0;
 }
@@ -101,7 +229,7 @@ section {
 }
 
 .image {
-  display: grid;
+  display:grid;
   place-items: center;
 }
 
@@ -110,7 +238,7 @@ section {
   border-radius: 100%;
 }
 
-@media (max-width: 750px) {
+@media (width < 750px) {
   nav .checkbox {
     display: block;
   }
@@ -145,106 +273,13 @@ section {
     grid-area: 1/1/2/2;
   }
 
-  .datetime {
-    background-color: #731ac7;
-    color: white;
-  }
+.datetime{
+  background-color: #731ac7;
+  color: white;
+}
 
   .action__btns {
     margin: auto;
   }
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Courier New', Courier, monospace;
-  height: 100%;
-  background-color: black;
-  color: white;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-}
-
-.magic-coding-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #731ac7;
-  overflow: hidden;
-}
-
-.coding-cursor {
-  position: absolute;
-  width: 10px;
-  height: 20px;
-  background-color: white;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0%, 50% {
-    opacity: 1;
-  }
-  50.1%, 100% {
-    opacity: 0;
-  }
-}
-
-.contact-form {
-  z-index: 1;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  text-align: center;
-}
-
-.contact-form h1 {
-  margin-bottom: 20px;
-  color: #731ac7;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #731ac7;
-  border-radius: 5px;
-  background: black;
-  color: white;
-}
-
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #731ac7;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #500b9e;
-}
-
-.social-links {
-  margin-top: 20px;
-}
-
-.social-links a {
-  margin: 0 10px;
-  color: white;
-}
-
-.social-links img {
-  width: 30px;
-  height: 30px;
-}
