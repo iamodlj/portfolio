@@ -12,6 +12,7 @@
   <title>My Portfolio | Abraham Sackey Ohene Gyan</title>
 </head>
 <body>
+  <div class="hacking-background"></div>
   <nav>
     <div class="nav__content">
       <div class="logo"><a href="index.html">Abraham Sackey Ohene Gyan</a></div>
@@ -46,7 +47,10 @@
         <div class="action__btns">
           <button class="hire__me" onclick="window.location.href='mailto:ohenegyanfamily@gmail.com';">Hire Me</button>
           <a href="Projects.html" target="_blank"><button class="portfolio">Projects</button></a>
-          
+          <button class="socials">Socials</button>
+          <div class="popup" id="social-popup">
+            <h3>Follow me on social media:</h3>           
+          </div>
         </div>
       </div>
       <div class="image">
@@ -57,7 +61,6 @@
   <button id="button">
     <span id="datetime"></span>
     <script>
-      // create a function to update the date and time
       function updateDateTime() {
         const now = new Date();
         const currentDateTime = now.toLocaleString();

@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Contact | Abraham Sackey Ohene Gyan</title>
 </head>
 <body>
-  <div class="container">
-    <div class="magic-coding-background">
-      <div class="coding-cursor"></div>
+  <div class="hacking-background"></div>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html">Abraham Sackey Ohene Gyan</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <div class="contact-form">
+  </nav>
+  <section class="section">
+    <div class="section__container">
       <h1>Contact Me</h1>
-      <form action="mailto:ohenegyanfamily@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <div class="social-links">
-        <a href="https://www.snapchat.com/add/iam_odlj" target="_blank">
-          <img src="snapchat-logo.png" alt="Snapchat">
-        </a>
-        <a href="https://www.instagram.com/iam_odlj" target="_blank">
-          <img src="instagram-logo.png" alt="Instagram">
-        </a>
-        <a href="mailto:ohenegyanfamily@gmail.com">
-          <img src="email-logo.png" alt="Email">
-        </a>
+      <div class="contact-form">
+        <h1>Contact Form</h1>
+        <form action="script.js" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+          <a href="https://twitter.com/yourprofile" target="_blank"><img src="images/twitter.png" alt="Twitter" /></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://github.com/yourprofile" target="_blank"><img src="images/github.png" alt="GitHub" /></a>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="script.js"></script>
+  </section>
 </body>
 </html>
