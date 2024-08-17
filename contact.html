@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="magic-coding-background">
-            <div class="coding-cursor"></div>
-        </div>
-
-        <div class="contact-form">
-            <h1>Contact Me</h1>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-
-            <div class="social-links">
-                <a href="https://www.snapchat.com/add/iam_odlj" target="_blank">
-                    <img src="snapchat-logo.png" alt="Snapchat">
-                </a>
-                <a href="https://www.instagram.com/iam_odlj" target="_blank">
-                    <img src="instagram-logo.png" alt="Instagram">
-                </a>
-                <a href="mailto:ohenegyanfamily@gmail.com">
-                    <img src="email-logo.png" alt="Email">
-                </a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="magic-coding-background">
+      <div class="coding-cursor"></div>
     </div>
-
-    <script src="script.js"></script>
+    <div class="contact-form">
+      <h1>Contact Me</h1>
+      <form action="mailto:ohenegyanfamily@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social-links">
+        <a href="https://www.snapchat.com/add/iam_odlj" target="_blank">
+          <img src="snapchat-logo.png" alt="Snapchat">
+        </a>
+        <a href="https://www.instagram.com/iam_odlj" target="_blank">
+          <img src="instagram-logo.png" alt="Instagram">
+        </a>
+        <a href="mailto:ohenegyanfamily@gmail.com">
+          <img src="email-logo.png" alt="Email">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,89 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
   <title>My Portfolio | Abraham Sackey Ohene Gyan</title>
-    
-  </head>
-  <body>
-    <nav>
-      <div class="nav__content">
-        <div class="logo"><a href="index.html">Abraham Sackey Ohene Gyan</a></div>
-        <label for="check" class="checkbox">
-          <i class="ri-menu-line"></i>
-        </label>
-        <input type="checkbox" name="check" id="check" />
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <section class="section">
-      <div class="section__container">
-        <div class="content">
-          <p class="subtitle">HELLO</p>
-          <h1 class="title">
-            I'm <span>Abraham<br />a</span> Front-End Developer
-          </h1>
-          <p class="description">
-            Welcome to my web portfolio! I'm Abraham, A passionate frontend developer 
-            dedicated to bringing digital ideas to life through clean, elegant, and user-centric designs. 
-            With a strong understanding in HTML, CSS, and JavaScript .
-            I've worked on a variety of
-            web projects, ranging from personal blogs to e-commerce platforms. I have also developed softwares
-            like Management System which can used by hostels, hotels, guest houses and Car rent Management. Currently working on a some 
-            new stuffs which I will share here when I am done.
-          </p>
-
-          <div class="action__btns">
-            <button class="hire__me" onclick="window.location.href='mailto:ohenegyanfamily@gmail.com';">Hire Me</button>
-            <button class="portfolio">Portfolio</button>
-            <button class="socials">Socials</button>
-            <a href="Projects.html" target="_blank"><button class="portfolio" >Projects</button></a>
-            <div class="popup" id="social-popup">
-              <h3>Follow me on social media:</h3>           
-            </div>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="index.html">Abraham Sackey Ohene Gyan</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">HELLO</p>
+        <h1 class="title">
+          I'm <span>Abraham<br />a</span> Front-End Developer
+        </h1>
+        <p class="description">
+          Welcome to my web portfolio! I'm Abraham, a passionate frontend developer 
+          dedicated to bringing digital ideas to life through clean, elegant, and user-centric designs. 
+          With a strong understanding in HTML, CSS, and JavaScript, I've worked on a variety of
+          web projects, ranging from personal blogs to e-commerce platforms. I have also developed software
+          like a Management System for hostels, hotels, guest houses, and Car Rent Management. Currently working on some 
+          new stuff which I will share here when I am done.
+        </p>
+        <div class="action__btns">
+          <button class="hire__me" onclick="window.location.href='mailto:ohenegyanfamily@gmail.com';">Hire Me</button>
+          <a href="Projects.html" target="_blank"><button class="portfolio">Projects</button></a>
+          <button class="socials">Socials</button>
+          <div class="popup" id="social-popup">
+            <h3>Follow me on social media:</h3>           
           </div>
-          
-           
-    
-        </div>
-        <div class="image">
-          <img  src="images/image2.png" alt="profile" />
         </div>
       </div>
-    </section>
-
-  </body >
-
+      <div class="image">
+        <img src="images/image2.png" alt="profile" />
+      </div>
+    </div>
+  </section>
   <button id="button">
     <span id="datetime"></span>
-    <script >
+    <script>
       // create a function to update the date and time
       function updateDateTime() {
-        // create a new `Date` object
         const now = new Date();
-      
-        // get the current date and time as a string
         const currentDateTime = now.toLocaleString();
-      
-        // update the `textContent` property of the `span` element with the `id` of `datetime`
         document.querySelector('#datetime').textContent = currentDateTime;
       }
-      
-      // call the `updateDateTime` function every second
       setInterval(updateDateTime, 1000);
-      </script>
-     </button>
+    </script>
+  </button>
+</body>
 </html>
