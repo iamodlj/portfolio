@@ -7,3 +7,4 @@ function moveCursor() {
 }
 
 setInterval(moveCursor, 1000);
+
