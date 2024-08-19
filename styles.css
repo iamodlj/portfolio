@@ -383,3 +383,23 @@ ul li a:hover {
     border-radius: 20px; /* Rounds the corners of the container on hover */
  }
   
+ #typing {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #000000;
+  white-space:initial;
+  overflow:hidden;
+  border-right: 3px solid;
+  width: fit-content; /* Adjusts the width to the content size */
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: fit-content; } /* Keep the text visible after typing */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #333; }
+}
