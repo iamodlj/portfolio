@@ -385,3 +385,34 @@ ul li a:hover {
     border-radius: 20px; /* Rounds the corners of the container on hover */
  }
   
+/* Loading screen styles */
+#loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  color: lime;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.code-container {
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: lime;
+  overflow: hidden;
+  animation: glitch 0.1s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+      text-shadow: 1px 1px 2px #fff, 2px 2px 3px #00ff00, -1px -1px 2px #ff0000;
+  }
+  50% {
+      text-shadow: 2px 2px 4px #fff, 1px 1px 1px #00ff00, 1px 1px 4px #ff0000;
+  }
+}
