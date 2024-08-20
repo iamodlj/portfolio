@@ -119,7 +119,7 @@ ul li a:hover {
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 3rem;
   color: var(--text-dark);
@@ -249,13 +249,15 @@ ul li a:hover {
   ul {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 85px);
-    left: -100%;
-    top: 85px;
+    height: calc(100vh - 60px);
+    top: 60px;
+    left: 0;
     background-color: var(--extra-light);
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
+    align-items: center;
+    display: none;
   }
 
   nav #check:checked ~ ul {
@@ -266,10 +268,15 @@ ul li a:hover {
     font-size: 1.25rem;
   }
 
+  /* Section styles */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
   .section__container {
-    padding: 10rem 1rem 5rem 1rem;
-    text-align: center;
-    grid-template-columns: repeat(1, 1fr);
+    max-width: 1200px;
+  margin: 0 auto;
   }
 
   .image {
@@ -408,34 +415,13 @@ ul li a:hover {
 }
 
 
-ul li {
-  margin-left: 20px;
-}
-
-ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
 @media (max-width: 768px) {
   .checkbox {
     display: block;
     font-size: 2rem;
   }
 
-  ul {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-color: #333;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: none;
-  }
+ 
 
   ul li {
     margin: 10px 0;
@@ -446,16 +432,8 @@ ul li a {
   }
 }
 
-/* Section styles */
-.section {
-  padding: 40px 20px;
-  text-align: center;
-}
 
-.section__container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 .title {
   font-size: 2.5rem;
