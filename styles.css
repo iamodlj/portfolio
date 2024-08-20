@@ -403,3 +403,143 @@ ul li a:hover {
   from, to { border-color: transparent; }
   50% { border-color: #333; }
 }
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.checkbox {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .checkbox {
+    display: block;
+    font-size: 2rem;
+  }
+
+  ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  ul li {
+    margin: 10px 0;
+  }
+
+  #check:checked ~ ul {
+    display: flex;
+  }
+}
+
+/* Section styles */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.action__btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #5a67d8;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #434190;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
