@@ -17,13 +17,11 @@
 a {
   text-decoration: none;
 }
-/* Base styles */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
-  box-sizing: border-box;
 }
 
 nav {
@@ -80,9 +78,8 @@ ul li a {
   border: 2px solid transparent;
   text-decoration: none;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-dark);
   transition: 0.3s;
-  font-size: 1rem;
 }
 
 ul li a:hover {
@@ -119,7 +116,7 @@ ul li a:hover {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 3rem;
   color: var(--text-dark);
@@ -249,15 +246,13 @@ ul li a:hover {
   ul {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 60px);
-    top: 60px;
-    left: 0;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
     background-color: var(--extra-light);
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-    align-items: center;
-    display: none;
   }
 
   nav #check:checked ~ ul {
@@ -268,15 +263,10 @@ ul li a:hover {
     font-size: 1.25rem;
   }
 
-  /* Section styles */
-.section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
   .section__container {
-    max-width: 1200px;
-  margin: 0 auto;
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .image {
@@ -412,77 +402,4 @@ ul li a:hover {
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: #333; }
-}
-
-
-@media (max-width: 768px) {
-  .checkbox {
-    display: block;
-    font-size: 2rem;
-  }
-
- 
-
-  ul li {
-    margin: 10px 0;
-  }
-
-  #check:checked ~ ul {
-    display: flex;
-  }
-}
-
-
-
-
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.description {
-  font-size: 1rem;
-  margin-bottom: 40px;
-}
-
-.action__btns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #5a67d8;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #434190;
-}
-
-@media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
 }
